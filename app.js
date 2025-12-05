@@ -23,6 +23,10 @@ app.use(methodOverride(function (req, res) {
 
 let todolist = [];
 
+app.get('/health', (req, res) => {
+    res.status(200).send("OK");
+});
+
 /* The to do list and the form are displayed */
 app.get('/todo', function (req, res) {
         res.render('todo.ejs', {
